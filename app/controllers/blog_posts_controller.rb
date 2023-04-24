@@ -3,7 +3,7 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, except: [:index, :new, :create]
 
   def index
-    @blog_posts = BlogPost.all
+    @blog_posts = BlogPost.order(updated_at: :desc).page params[:page]
   end
 
   def show
@@ -41,7 +41,7 @@ class BlogPostsController < ApplicationController
   private
 
   def blog_post_params
-    params.require(:blog_post).permit(:title, :body) 
+    params.require(:blog_post).permit(:title, :content) 
   end
 
   def set_blog_post

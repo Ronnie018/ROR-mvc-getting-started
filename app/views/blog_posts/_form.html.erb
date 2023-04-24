@@ -1,21 +1,21 @@
 <%= form_with model: @blog_post do |form| %>
   <% if form.object.errors.any? %>
-    <div>
+    <div class="form-error-container">
       <% form.object.errors.full_messages.each do |message| %>
         <div> <%= message %> </div>
       <% end %>
     </div>
   <% end %>
 
-  <div>
+  <div class="form-item-wrapper mb-5">
     <%= form.label :title%>
     <%= form.text_field :title%>
   </div>
 
-  <div>
-    <%= form.label :body%>
-    <%= form.text_area :body%>
+  <div class="form-rich_item-wrapper mb-4">
+    <%= form.label :content%>
+    <%= form.rich_text_area :content%>
   </div>
 
-  <%= form.button %>
+  <%= form.button class: "mb-4 form-button" %>
 <% end %>
