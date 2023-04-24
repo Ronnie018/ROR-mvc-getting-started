@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # scope "(:locale)", locale: "/#{I18n.available_locales.join("|")}/" do
+  #   resources :blog_post
+  #   root "blog_posts#index"
+  # end
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   
   get "/blog_posts/new", to: "blog_posts#new", as: :new_blog_post
   get "/blog_posts/:id", to: "blog_posts#show", as: :blog_post
