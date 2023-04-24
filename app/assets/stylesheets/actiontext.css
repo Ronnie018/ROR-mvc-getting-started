@@ -29,3 +29,9 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+.trix-content {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 1rem 4rem;
+}

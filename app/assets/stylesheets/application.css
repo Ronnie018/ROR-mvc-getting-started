@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(to right, #15619e, #68b022);
+}
+
 #trix-toolbar-1 .trix-button-row {
   flex-wrap: wrap;
 }
@@ -11,9 +15,6 @@
 .form-item-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.form-rich_item-wrapper {
 }
 
 .form-button {
@@ -30,4 +31,78 @@
 .form-button.delete:hover {
   background-color: #c24b4b;
   color: white;
+}
+
+.navbar {
+  background-color: #52a0cc;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-container {
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.post-container.single-post {
+  padding: 2rem;
+}
+
+.post-container h2 {
+  background-color: #b9b9b9;
+  padding: 1.5rem;
+}
+
+.post-container a {
+  color: #15619e;
+}
+
+.date-name {
+  padding: 1rem 4rem;
+}
+
+.form {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.879);
+  width: 340px;
+  height: 420px;
+  height: max-content;
+  padding: 15px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 2rem 1rem;
+  color: #15619e;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  background: #68b022;
+  border-radius: 4px;
+  border: none;
+  padding: 0.8rem 3rem;
+  margin: auto;
+  font-family: roboto;
+  font-size: 16px;
+}
+
+input[type='submit'] {
+  background: #68b022;
+  border-radius: 4px;
+  border: none;
+  padding: 0.8rem 3rem;
+  margin: auto;
+  margin-top: 1rem;
+  font-family: roboto;
+  font-size: 16px;
 }
